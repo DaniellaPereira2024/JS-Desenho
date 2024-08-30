@@ -1,25 +1,36 @@
+let cor;
+let x;
+let y;
+
 function setup() {
   createCanvas(400, 400);
+  background ("white");
+  cor = color ( random (0,255),random (0,255),random (0,255));
 }
-  function draw() {
-  background("blue");
-  fill( "black");
-  textSize (100);
-  textAlign (CENTER,CENTER);
+  x=200
+  y=200
+
+function draw() {
   
-  let maximo = width;
-  let minimo = 0;
-  //let palavra = "Daniella";
- let quatidade = map (mouseX,0,width,0,palavra.length); 
-    
-  //console.log ("daniella.length");
-    
- //if(mouseX <50) {
- // let palavra = "D";
-  // text( palavra, 200,200);   
- // } else { 
-   
-   //let palavra = "Daniella";
-  // text( palavra, 200,200);  
- // } 
-  }  
+  fill(cor);
+  circle(x,y,100);
+
+  if(mouseX < x) {
+    x = x-1;
+  }
+  
+   if(mouseX > x) {
+    x = x+1;
+  }
+  
+  
+   if(mouseY < y) {
+    y = y-1;
+  }
+  
+   if(mouseY > y) {
+    y = y+1;
+  }
+ 
+  
+}
